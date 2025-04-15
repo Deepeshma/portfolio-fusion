@@ -53,10 +53,4 @@ This portfolio was developed using:
 
 ## Deployment
 
-This site is deployed on Netlify and can be accessed at: [your-netlify-url-here]
-
-## Author
-
-[Your Name]
-ISYS3004 Business Web and Mobile Technologies
-[Date]
+This site is deployed on Github pages and can be accessed at: https://deepeshma.github.io/portfolio-fusion/
