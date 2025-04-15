@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepeshma | Front-End Developer</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Professional portfolio showcasing front-end development projects and skills" />
+    <!-- Preconnect to reduce loading time -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Home">
+                    <span class="logo-text">Deepeshma</span>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active" aria-current="page">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="assets/resume.pdf" class="resume-link" target="_blank" rel="noopener">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <span class="intro-text">Hello, I'm</span>
+                <h1>Deepeshma</h1>
+                <div class="typewriter">
+                    <span class="typed-text">Front-End Developer</span>
+                </div>
+                <p class="tagline">
+                    Creating intuitive digital experiences with code and creativity
+                </p>
+                <div class="cta-container">
+                    <a href="#projects" class="cta-button primary">View My Work</a>
+                    <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Deepeshma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <pre><code>&lt;div class="developer"&gt;
+                &lt;function createExperience() {
+                    const skills = [
+                        "HTML", "CSS", "JavaScript"
+                    ];
+                    const passion = "Building
+                        beautiful interfaces";
+                    
+                    return innovation(skills, passion);
+                }&gt;
+            &lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2>My Story</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpg" alt="Deepeshma - Front-End Developer" width="400"
+                            height="400" />
+                        <div class="experience-badge">
+                            <span class="years">2+</span>
+                            <span class="text">Years<br />Experience</span>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm a passionate front-end developer with 2+ years of
+                            experience creating responsive, accessible, and user-friendly
+                            web experiences. My approach combines technical expertise with
+                            creative problem-solving to build websites that not only look
+                            great but perform exceptionally.
+                        </p>
+
+                        <p>
+                            I specialize in translating design concepts into fully
+                            functional websites and applications, focusing on performance
+                            optimization and accessibility. My background in both design and
+                            development gives me a unique perspective on creating seamless
+                            user experiences.
+                        </p>
+
+                        <p>
+                            When I'm not coding, you'll find me exploring new web
+                            technologies, contributing to open-source projects, or mentoring
+                            aspiring developers. I believe in continuous learning and
+                            pushing the boundaries of what's possible on the web.
+                        </p>
+
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="label">Name:</span>
+                                <span class="value">Deepeshma Doe</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Email:</span>
+                                <span class="value">deepeshma@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Location:</span>
+                                <span class="value">San Francisco, CA</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Availability:</span>
+                                <span class="value available">Available for Freelance</span>
+                            </div>
+                        </div>
+
+                        <a href="assets/resume.pdf" class="download-resume" target="_blank" rel="noopener">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">My Expertise</span>
+                    <h2>Skills & Technologies</h2>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress html" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span class="skill-name">CSS3/SASS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress css" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress js" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress react" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3>Design & Tools</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-figma"></i>
+                                <span class="skill-name">Figma</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress figma" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span class="skill-name">Git/GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress git" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-universal-access"></i>
+                                <span class="skill-name">Accessibility</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress a11y" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span class="skill-name">Responsive Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress responsive" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">My Work</span>
+                    <h2>Featured Projects</h2>
+                    <p class="section-description">
+                        Explore my recent web development work showcasing various skills
+                        and technologies.
+                    </p>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                    <button class="filter-btn" data-filter="javascript">
+                        JavaScript
+                    </button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card" data-category="html-css">
+                        <div class="project-image">
+                            <img src="assets/images/urban-brew-cafe.png" alt="Screenshot of Basic Webpage project"
+                                width="400" height="225" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://urban-brew-cafe.vercel.app/" class="project-link" aria-label="View live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Deepeshma/urban-brew-cafe.git" class="project-link" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Basic Webpage</h3>
+                            <p>
+                                A foundational HTML & CSS project demonstrating semantic
+                                markup and styling principles with a focus on accessibility.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <a href="projects/basic-webpage.html" class="view-details">View Details <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="javascript">
+                        <div class="project-image">
+                            <img src="assets/images/rock-paper-scissors.png"
+                                alt="Screenshot of Rock Paper Scissors game" width="400" height="225" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://rock-paper-scissors-pearl-eight-97.vercel.app/" class="project-link" aria-label="View live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Deepeshma/rock-paper-scissors.git" class="project-link" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Rock Paper Scissors Game</h3>
+                            <p>
+                                An interactive game using JavaScript to create a fun and
+                                responsive user experience with animations and score tracking.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="projects/rock-paper-scissors.html" class="view-details">View Details <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="javascript">
+                        <div class="project-image">
+                            <img src="assets/images/flatland-business-advisor.png"
+                                alt="Screenshot of Flatland Business Advisor application" width="400" height="225" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://flatland-business-advisor.vercel.app/" class="project-link" aria-label="View live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Deepeshma/flatland-business-advisor.git" class="project-link" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Flatland Business Advisor</h3>
+                            <p>
+                                A business tool application demonstrating advanced DOM
+                                manipulation techniques and data visualization.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">DOM API</span>
+                            </div>
+                            <a href="projects/flatland-advisor.html" class="view-details">View Details <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="react">
+                        <div class="project-image">
+                            <img src="assets/images/rss-reader.png" alt="Screenshot of RSS Reader application"
+                                width="400" height="225" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://rss-reader-phi-rouge.vercel.app/" class="project-link" aria-label="View live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Deepeshma/rss-reader.git" class="project-link" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>RSS Reader</h3>
+                            <p>
+                                A dynamic content aggregator using the Fetch API to retrieve
+                                and display RSS feeds with filtering and search capabilities.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Fetch API</span>
+                            </div>
+                            <a href="projects/rss-reader.html" class="view-details">View Details <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="view-all-projects">
+                    <a href="projects.html" class="cta-button secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">My Journey</span>
+                    <h2>Experience & Education</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-section">
+                        <h3 class="timeline-heading">
+                            <i class="fas fa-briefcase"></i> Work Experience
+                        </h3>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2022 - Present</div>
+                                <div class="timeline-content">
+                                    <h4>Front-End Developer</h4>
+                                    <h5>Tech Innovations Inc.</h5>
+                                    <p>
+                                        Lead front-end development for various client projects,
+                                        implementing responsive designs and optimizing
+                                        performance. Collaborated with UX/UI designers to create
+                                        seamless user experiences.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2020 - 2022</div>
+                                <div class="timeline-content">
+                                    <h4>UI Developer</h4>
+                                    <h5>Digital Solutions Group</h5>
+                                    <p>
+                                        Developed and maintained responsive websites for corporate
+                                        clients. Improved website performance by 40% through
+                                        optimization techniques and modern coding practices.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2018 - 2020</div>
+                                <div class="timeline-content">
+                                    <h4>Web Developer Intern</h4>
+                                    <h5>Creative Agency Co.</h5>
+                                    <p>
+                                        Assisted in building website components and implementing
+                                        designs. Learned industry best practices for front-end
+                                        development and collaborated on team projects.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-section">
+                        <h3 class="timeline-heading">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </h3>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2016 - 2020</div>
+                                <div class="timeline-content">
+                                    <h4>Bachelor of Science in Computer Science</h4>
+                                    <h5>University of Technology</h5>
+                                    <p>
+                                        Specialized in web technologies and interactive media.
+                                        Graduated with honors and received the Outstanding Student
+                                        in Web Development award.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2023</div>
+                                <div class="timeline-content">
+                                    <h4>Advanced Front-End Development Certification</h4>
+                                    <h5>Frontend Masters</h5>
+                                    <p>
+                                        Completed intensive training in advanced JavaScript
+                                        frameworks, performance optimization, and modern CSS
+                                        techniques.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Client Feedback</span>
+                    <h2>Testimonials</h2>
+                </div>
+
+                <div class="testimonial-slider">
+                    <div class="testimonial-container">
+                        <div class="testimonial">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                Deepeshma's attention to detail and commitment to creating
+                                responsive, accessible websites exceeded our expectations. His
+                                technical skills combined with an eye for design made our
+                                project a success.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="assets/images//client-1.jpg" alt="Sarah Johnson" width="60" height="60" />
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Marketing Director, TechStart</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                Working with Deepeshma was a pleasure. He took our vague concept
+                                and transformed it into a beautiful, functional website that
+                                perfectly represents our brand. His communication throughout
+                                the process was excellent.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="assets/images/client-2.jpg" alt="Michael Chen" width="60" height="60" />
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <p>Founder, Innovate Studio</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                Deepeshma's technical expertise and problem-solving abilities
+                                helped us overcome several challenges in our project. The
+                                final product was not only visually stunning but also
+                                performed exceptionally well.
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="assets/images/client-3.jpg" alt="Elena Rodriguez" width="60" height="60" />
+                                <div class="author-info">
+                                    <h4>Elena Rodriguez</h4>
+                                    <p>Product Manager, DigiSolutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="prev-testimonial" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="next-testimonial" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Contact Me</h2>
+                    <p class="section-description">
+                        Have a project in mind or want to discuss opportunities? Feel free
+                        to reach out!
+                    </p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>
+                                    <a href="mailto:hello@johndoe.com">deepeshma@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+14155552671">(415) 555-2671</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>San Francisco, California</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links-container">
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="https://github.com/Deepeshma" target="_blank" rel="noopener"
+                                    aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener"
+                                    aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener"
+                                    aria-label="Twitter Profile">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html">Deepe<span>shma</span></a>
+                </div>
+                <p class="footer-tagline">
+                    Creating intuitive digital experiences with code and creativity
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Deepeshma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="projects/basic-webpage.html">Basic Webpage</a></li>
+                        <li>
+                            <a href="projects/rock-paper-scissors.html">Rock Paper Scissors</a>
+                        </li>
+                        <li>
+                            <a href="projects/flatland-advisor.html">Flatland Advisor</a>
+                        </li>
+                        <li><a href="projects/rss-reader.html">RSS Reader</a></li>
+                        <li><a href="projects.html">All Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:deepeshma@gmail.com">deepeshma@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+14155552671">(415) 555-2671</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, California</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Deepeshma. All rights reserved.</p>
+            <a href="#hero" class="back-to-top" aria-label="Back to top">
+                <i class="fas fa arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

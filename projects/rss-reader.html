@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS Reader | Deepeshma</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Detailed information about RSS Reader project by Deepeshma" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="Home">
+                    <span class="logo-text">Deepeshma</span>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects" class="active" aria-current="page">Projects</a></li>
+                    <li><a href="../index.html#testimonials">Testimonials</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li>
+                        <a href="../assets/resume.pdf" class="resume-link" target="_blank" rel="noopener">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <div class="section-container">
+                <div class="project-header">
+                    <a href="../index.html#projects" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Projects
+                    </a>
+                    <h1>RSS Reader</h1>
+                    <div class="project-links-header">
+                        <a href="https://rss-reader-phi-rouge.vercel.app/" class="button primary" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Deepeshma/rss-reader.git" class="button secondary" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-showcase">
+                    <div class="project-image-large">
+                        <img src="../assets/images/rss-reader.png" alt="Screenshot of RSS Reader application" />
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div class="project-overview">
+                        <h2>Project Overview</h2>
+                        <p>
+                            The RSS Reader is a modern web application that aggregates and displays content from multiple RSS feeds 
+                            in a clean, user-friendly interface. This project demonstrates my proficiency with asynchronous JavaScript, 
+                            API integration, and dynamic content rendering. Users can subscribe to multiple feeds, filter content by 
+                            source or category, search for specific articles, and save favorites for later reading.
+                        </p>
+                    </div>
+
+                    <div class="project-details-grid">
+                        <div class="project-detail-item">
+                            <h3>Project Goals</h3>
+                            <ul>
+                                <li>Create a modern RSS aggregator with an intuitive user interface</li>
+                                <li>Implement asynchronous data fetching using the Fetch API</li>
+                                <li>Build advanced filtering and search functionality</li>
+                                <li>Develop a responsive design for all device types</li>
+                                <li>Practice working with external APIs and XML parsing</li>
+                                <li>Implement persistent data storage for user preferences</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Technologies Used</h3>
+                            <ul>
+                                <li>HTML5 for semantic structure</li>
+                                <li>CSS3 with CSS Grid and Flexbox for responsive layout</li>
+                                <li>JavaScript (ES6+) for application logic</li>
+                                <li>Fetch API for asynchronous data retrieval</li>
+                                <li>DOMParser for XML/RSS parsing</li>
+                                <li>Local Storage API for saving user preferences</li>
+                                <li>CORS proxy for handling cross-origin requests</li>
+                                <li>GitHub for version control</li>
+                                <li>Github Pages for deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-development">
+                        <h2>Development Process</h2>
+                        <div class="development-step">
+                            <h3>1. Research and Planning</h3>
+                            <p>
+                                I began by researching RSS feed standards and exploring how modern feed readers work. This research 
+                                informed my planning process, where I created wireframes and user flow diagrams to map out the 
+                                application structure. I identified key features that would make the reader both functional and 
+                                user-friendly.
+                            </p>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>2. Setting up the Project Architecture</h3>
+                            <p>
+                                I designed a modular architecture that separated concerns between data fetching, parsing, 
+                                storage, and UI rendering. This approach made the codebase more maintainable and easier to extend.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>// Project architecture
+const RSSReader = {
+  // Core application modules
+  feedManager: {
+    // Handles feed subscriptions and data retrieval
+    feeds: [],
+    addFeed(url) { /* ... */ },
+    removeFeed(id) { /* ... */ },
+    fetchAllFeeds() { /* ... */ }
+  },
+  
+  dataParser: {
+    // Handles RSS/XML parsing
+    parseRSS(xmlData) { /* ... */ },
+    parseAtom(xmlData) { /* ... */ },
+    normalizeEntries(entries, source) { /* ... */ }
+  },
+  
+  storageManager: {
+    // Manages local storage operations
+    saveFeeds() { /* ... */ },
+    loadFeeds() { /* ... */ },
+    saveFavorites() { /* ... */ },
+    loadFavorites() { /* ... */ }
+  },
+  
+  uiController: {
+    // Manages the user interface
+    renderFeeds() { /* ... */ },
+    renderArticles(articles) { /* ... */ },
+    bindEventListeners() { /* ... */ },
+    handleSearch(query) { /* ... */ },
+    applyFilters(filters) { /* ... */ }
+  },
+  
+  // Application initialization
+  init() {
+    this.storageManager.loadFeeds();
+    this.storageManager.loadFavorites();
+    this.uiController.bindEventListeners();
+    this.fetchAndRenderFeeds();
+  }
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>3. Implementing Fetch API for RSS Retrieval</h3>
+                            <p>
+                                One of the key challenges was fetching RSS feeds, which often encounter CORS restrictions. I implemented 
+                                a solution using a CORS proxy service to handle cross-origin requests while maintaining security.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>async function fetchFeed(feedUrl) {
+  try {
+    // Use CORS proxy to avoid cross-origin issues
+    const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    const response = await fetch(`${proxyUrl}${encodeURIComponent(feedUrl)}`);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch feed: ${response.status} ${response.statusText}`);
+    }
+    
+    const data = await response.text();
+    return data;
+  } catch (error) {
+    console.error('Error fetching feed:', error);
+    throw error;
+  }
+}
+
+async function processFeed(feed) {
+  try {
+    const xmlData = await fetchFeed(feed.url);
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
+    
+    // Determine feed type (RSS vs Atom) and parse accordingly
+    const feedType = determineFeedType(xmlDoc);
+    let articles;
+    
+    if (feedType === 'atom') {
+      articles = parseAtomFeed(xmlDoc, feed);
+    } else {
+      articles = parseRSSFeed(xmlDoc, feed);
+    }
+    
+    return articles;
+  } catch (error) {
+    console.error(`Error processing feed ${feed.url}:`, error);
+    return [];
+  }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>4. XML Parsing and Normalization</h3>
+                            <p>
+                                RSS feeds come in various formats (RSS 2.0, Atom, etc.), so I created parsers that could handle 
+                                different feed types and normalize the data into a consistent format for the application.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function parseRSSFeed(xmlDoc, feedInfo) {
+  const items = xmlDoc.querySelectorAll('item');
+  const articles = [];
+  
+  items.forEach(item => {
+    // Extract basic item information
+    const title = getElementText(item, 'title');
+    const link = getElementText(item, 'link');
+    const description = getElementText(item, 'description');
+    const pubDateText = getElementText(item, 'pubDate');
+    
+    // Parse date (handling various date formats)
+    const pubDate = parseFeedDate(pubDateText);
+    
+    // Extract categories/tags
+    const categories = [];
+    item.querySelectorAll('category').forEach(category => {
+      categories.push(category.textContent.trim());
+    });
+    
+    // Extract media if available
+    let mediaUrl = '';
+    const mediaContent = item.querySelector('media\\:content, content');
+    if (mediaContent && mediaContent.getAttribute('url')) {
+      mediaUrl = mediaContent.getAttribute('url');
+    } else {
+      // Try to extract image from enclosure
+      const enclosure = item.querySelector('enclosure');
+      if (enclosure && enclosure.getAttribute('type')?.startsWith('image/')) {
+        mediaUrl = enclosure.getAttribute('url');
+      } else {
+        // Try to extract first image from description
+        const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
+        if (imgMatch) {
+          mediaUrl = imgMatch[1];
+        }
+      }
+    }
+    
+    articles.push({
+      id: generateUniqueId(link),
+      title,
+      link,
+      description: cleanDescription(description),
+      pubDate,
+      source: {
+        id: feedInfo.id,
+        title: feedInfo.title,
+        url: feedInfo.url
+      },
+      categories,
+      mediaUrl,
+      isRead: false,
+      isFavorite: false
+    });
+  });
+  
+  return articles;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>5. Building the User Interface</h3>
+                            <p>
+                                I designed a clean, modern interface with a focus on readability and usability. The UI features a 
+                                responsive layout that adapts to different screen sizes, making it comfortable to use on both 
+                                desktop and mobile devices.
+                            </p>
+                            <p>
+                                The interface includes:
+                            </p>
+                            <ul>
+                                <li>A sidebar for feed management and filtering</li>
+                                <li>A main content area for displaying articles</li>
+                                <li>A search bar for finding specific content</li>
+                                <li>Filter controls for sorting and categorizing articles</li>
+                                <li>A reading mode for distraction-free article consumption</li>
+                            </ul>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>6. Implementing Search and Filter Functionality</h3>
+                            <p>
+                                To enhance the user experience, I implemented robust search and filtering capabilities that allow 
+                                users to quickly find relevant content within their feeds.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function searchArticles(articles, query) {
+  if (!query || query.trim() === '') {
+    return articles;
+  }
+  
+  const searchTerms = query.toLowerCase().trim().split(' ').filter(term => term.length > 0);
+  
+  return articles.filter(article => {
+    // Search in title, description, and categories
+    const titleMatch = searchTerms.some(term => 
+      article.title.toLowerCase().includes(term)
+    );
+    
+    const descriptionMatch = searchTerms.some(term => 
+      article.description.toLowerCase().includes(term)
+    );
+    
+    const categoryMatch = article.categories.some(category => 
+      searchTerms.some(term => category.toLowerCase().includes(term))
+    );
+    
+    return titleMatch || descriptionMatch || categoryMatch;
+  });
+}
+
+function applyFilters(articles, filters) {
+  let filteredArticles = [...articles];
+  
+  // Filter by source
+  if (filters.sources && filters.sources.length > 0) {
+    filteredArticles = filteredArticles.filter(article => 
+      filters.sources.includes(article.source.id)
+    );
+  }
+  
+  // Filter by category
+  if (filters.categories && filters.categories.length > 0) {
+    filteredArticles = filteredArticles.filter(article => 
+      article.categories.some(category => 
+        filters.categories.some(filter => category.toLowerCase().includes(filter.toLowerCase()))
+      )
+    );
+  }
+  
+  // Filter by read/unread status
+  if (filters.readStatus === 'read') {
+    filteredArticles = filteredArticles.filter(article => article.isRead);
+  } else if (filters.readStatus === 'unread') {
+    filteredArticles = filteredArticles.filter(article => !article.isRead);
+  }
+  
+  // Filter by favorites
+  if (filters.onlyFavorites) {
+    filteredArticles = filteredArticles.filter(article => article.isFavorite);
+  }
+  
+  // Sort articles
+  filteredArticles.sort((a, b) => {
+    if (filters.sortBy === 'date') {
+      return b.pubDate - a.pubDate; // Newest first
+    } else if (filters.sortBy === 'source') {
+      return a.source.title.localeCompare(b.source.title);
+    }
+    return 0;
+  });
+  
+  return filteredArticles;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>7. Implementing Local Storage for Persistence</h3>
+                            <p>
+                                To enhance the user experience, I implemented local storage functionality to save user preferences, 
+                                feed subscriptions, read status, and favorites between sessions.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>const StorageManager = {
+  saveFeeds(feeds) {
+    try {
+      localStorage.setItem('rssReader_feeds', JSON.stringify(feeds));
+      return true;
+    } catch (error) {
+      console.error('Error saving feeds to local storage:', error);
+      return false;
+    }
+  },
+  
+  loadFeeds() {
+    try {
+      const savedFeeds = localStorage.getItem('rssReader_feeds');
+      return savedFeeds ? JSON.parse(savedFeeds) : [];
+    } catch (error) {
+      console.error('Error loading feeds from local storage:', error);
+      return [];
+    }
+  },
+  
+  saveArticleStatus(articleId, status) {
+    try {
+      // Get existing status objects
+      const articleStatus = JSON.parse(localStorage.getItem('rssReader_articleStatus') || '{}');
+      
+      // Update status for this article
+      articleStatus[articleId] = {
+        ...articleStatus[articleId],
+        ...status,
+        lastUpdated: new Date().toISOString()
+      };
+      
+      // Save back to storage
+      localStorage.setItem('rssReader_articleStatus', JSON.stringify(articleStatus));
+      return true;
+    } catch (error) {
+      console.error('Error saving article status:', error);
+      return false;
+    }
+  },
+  
+  loadArticlesStatus() {
+    try {
+      const status = localStorage.getItem('rssReader_articleStatus');
+      return status ? JSON.parse(status) : {};
+    } catch (error) {
+      console.error('Error loading article status:', error);
+      return {};
+    }
+  },
+  
+  saveUserPreferences(preferences) {
+    try {
+      localStorage.setItem('rssReader_preferences', JSON.stringify(preferences));
+      return true;
+    } catch (error) {
+      console.error('Error saving user preferences:', error);
+      return false;
+    }
+  }
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>8. Error Handling and Loading States</h3>
+                            <p>
+                                To create a robust user experience, I implemented comprehensive error handling and loading states 
+                                throughout the application. This ensures users always know what's happening, even when network issues 
+                                or feed parsing problems occur.
+                            </p>
+                            <p>
+                                I created a centralized error handling system that:
+                            </p>
+                            <ul>
+                                <li>Provides meaningful error messages for different failure scenarios</li>
+                                <li>Implements automatic retry logic for network failures</li>
+                                <li>Displays appropriate loading indicators during asynchronous operations</li>
+                                <li>Gracefully handles feed parsing errors without crashing the application</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="development-step">
+                            <h3>9. Testing and Optimization</h3>
+                            <p>
+                                The application was thoroughly tested across different browsers and devices to ensure consistent 
+                                behavior and performance. I implemented several optimizations:
+                            </p>
+                            <ul>
+                                <li>Cache management to reduce unnecessary network requests</li>
+                                <li>Lazy loading of articles for improved initial load time</li>
+                                <li>Virtual scrolling for handling large numbers of articles without performance degradation</li>
+                                <li>Image optimization to reduce bandwidth usage</li>
+                                <li>Code splitting for better resource management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-features">
+                        <h2>Key Features</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rss"></i>
+                                </div>
+                                <h3>Multi-Feed Management</h3>
+                                <p>Subscribe to multiple RSS/Atom feeds and manage them from a unified interface</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>Advanced Search</h3>
+                                <p>Full-text search across all articles with highlighted results</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <h3>Smart Filtering</h3>
+                                <p>Filter content by source, category, read status, and favorites</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <h3>Reading Management</h3>
+                                <p>Track read articles and save favorites for later reference</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h3>Reading Mode</h3>
+                                <p>Distraction-free reading experience with customizable display options</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3>Responsive Design</h3>
+                                <p>Optimized layout for all device sizes from mobile to desktop</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-challenges">
+                        <h2>Challenges & Solutions</h2>
+                        <div class="challenge-item">
+                            <h3>Challenge: Cross-Origin Resource Sharing (CORS)</h3>
+                            <p>
+                                One of the biggest challenges was dealing with CORS restrictions when fetching RSS feeds from 
+                                different domains, which is a common security limitation in web browsers.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I implemented a proxy-based solution that routes feed requests through a CORS-enabled API proxy. 
+                                This approach maintains security while allowing the application to access feeds from any domain. 
+                                I also implemented a fallback system that tries multiple proxy services in case one fails, ensuring 
+                                reliable feed fetching.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Challenge: Handling Different Feed Formats</h3>
+                            <p>
+                                RSS feeds come in multiple formats (RSS 1.0, RSS 2.0, Atom) with different structures, making 
+                                consistent parsing and normalization challenging.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I created a feed format detection system that identifies the feed type before parsing. Each format 
+                                has its own specialized parser that extracts the relevant data and normalizes it into a consistent 
+                                internal format. This abstraction layer shields the rest of the application from needing to handle 
+                                format-specific details, making the code more maintainable.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Challenge: Performance with Large Numbers of Articles</h3>
+                            <p>
+                                When users subscribe to multiple active feeds, the number of articles can quickly grow into the 
+                                hundreds or thousands, causing performance issues during rendering and searching.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I implemented a virtual scrolling technique that only renders articles currently visible in the 
+                                viewport. This dramatically improves performance by reducing DOM elements and rendering work. 
+                                Additionally, I implemented an indexing system for search operations that makes full-text search 
+                                efficient even with thousands of articles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-outcomes">
+                        <h2>Outcomes & Lessons Learned</h2>
+                        <p>
+                            Building the RSS Reader significantly enhanced my skills in working with web APIs, asynchronous JavaScript, 
+                            and data management. Key takeaways include:
+                        </p>
+                        <ul>
+                            <li>
+                                Techniques for handling cross-origin requests and working within browser security constraints
+                            </li>
+                            <li>
+                                Approaches to parsing and normalizing XML/RSS data from diverse sources
+                            </li>
+                            <li>
+                                Methods for optimizing performance when working with large datasets
+                            </li>
+                            <li>
+                                Implementation of complex search and filtering algorithms
+                            </li>
+                            <li>
+                                Creating persistent storage solutions for web applications
+                            </li>
+                        </ul>
+                        <p>
+                            The finished application has received positive feedback for its clean interface, fast performance, and 
+                            comprehensive feature set. Users particularly appreciate the ability to aggregate content from multiple 
+                            sources in one place and the powerful filtering capabilities that help them find relevant information quickly.
+                        </p>
+                        <p>
+                            This project serves as an excellent demonstration of my ability to create practical, user-centered web 
+                            applications that solve real information management problems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-navigation">
+                    <h2>Explore More Projects</h2>
+                    <div class="project-nav-links">
+                        <a href="flatland-advisor.html" class="project-nav-link prev">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Previous Project</span>
+                            <h3>Flatland Business Advisor</h3>
+                        </a>
+                        <a href="../projects.html" class="project-nav-link next">
+                            <span>More Projects</span>
+                            <h3>View All Projects</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="../index.html">Deepe<span>shma</span></a>
+                </div>
+                <p class="footer-tagline">
+                    Creating intuitive digital experiences with code and creativity
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Deepeshma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#hero">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#testimonials">Testimonials</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="basic-webpage.html">Urban Brew Cafe</a></li>
+                        <li><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
+                        <li><a href="flatland-advisor.html">Flatland Business Advisor</a></li>
+                        <li><a href="rss-reader.html" class="active">RSS Reader</a></li>
+                        <li><a href="../projects.html">All Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:deepeshma@gmail.com">deepeshma@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+14155552671">(415) 555-2671</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, California</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Deepeshma. All rights reserved.</p>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

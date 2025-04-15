@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flatland Business Advisor | Deepeshma</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Detailed information about Flatland Business Advisor project by Deepeshma" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="Home">
+                    <span class="logo-text">Deepeshma</span>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects" class="active" aria-current="page">Projects</a></li>
+                    <li><a href="../index.html#testimonials">Testimonials</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li>
+                        <a href="../assets/resume.pdf" class="resume-link" target="_blank" rel="noopener">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <div class="section-container">
+                <div class="project-header">
+                    <a href="../index.html#projects" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Projects
+                    </a>
+                    <h1>Flatland Business Advisor</h1>
+                    <div class="project-links-header">
+                        <a href="https://flatland-business-advisor.vercel.app/" class="button primary" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Deepeshma/flatland-business-advisor.git" class="button secondary" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-showcase">
+                    <div class="project-image-large">
+                        <img src="../assets/images/flatland-business-advisor.png" alt="Screenshot of Flatland Business Advisor application" />
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div class="project-overview">
+                        <h2>Project Overview</h2>
+                        <p>
+                            Flatland Business Advisor is a sophisticated business tool that helps entrepreneurs in the fictional 
+                            world of Flatland manage their ventures. This application demonstrates my advanced skills in DOM manipulation, 
+                            interactive data visualization, and complex business logic implementation. Users can input business metrics, 
+                            receive financial forecasts, and visualize their business health through interactive charts and reports.
+                        </p>
+                    </div>
+
+                    <div class="project-details-grid">
+                        <div class="project-detail-item">
+                            <h3>Project Goals</h3>
+                            <ul>
+                                <li>Create a sophisticated business analytics tool with an intuitive interface</li>
+                                <li>Implement advanced DOM manipulation for dynamic content rendering</li>
+                                <li>Develop interactive data visualization components from scratch</li>
+                                <li>Demonstrate complex business logic implementation in JavaScript</li>
+                                <li>Build a modular, scalable application architecture</li>
+                                <li>Create a responsive design appropriate for business professionals</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Technologies Used</h3>
+                            <ul>
+                                <li>HTML5 for semantic structure</li>
+                                <li>CSS3 with CSS Grid and Flexbox for layout</li>
+                                <li>Vanilla JavaScript (ES6+) with no external libraries</li>
+                                <li>Custom-built charts and visualization components</li>
+                                <li>Local Storage for saving user data</li>
+                                <li>Custom form validation and data processing</li>
+                                <li>GitHub for version control</li>
+                                <li>Github pages for deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-development">
+                        <h2>Development Process</h2>
+                        <div class="development-step">
+                            <h3>1. Research and Planning</h3>
+                            <p>
+                                Before writing any code, I conducted research on business analytics tools and dashboard design principles. 
+                                I created detailed wireframes and user flow diagrams to plan the application architecture and user experience. 
+                                This planning phase was crucial for establishing a clear vision of the features and functionality required.
+                            </p>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>2. Application Architecture</h3>
+                            <p>
+                                I designed a modular architecture with clear separation of concerns, dividing the application into 
+                                components for data management, UI rendering, business logic, and visualization. This structure allowed 
+                                for easier maintenance and future expansion of features.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>
+                // Application architecture overview
+                const FlatlandAdvisor = {
+                // Core application modules
+                dataManager: {
+                    // Handles data storage, retrieval, and processing
+                    userData: {},
+                    businessMetrics: {},
+                    saveData() { /* ... */ },
+                    loadData() { /* ... */ },
+                    calculateMetrics() { /* ... */ }
+                },
+                
+                uiController: {
+                    // Manages the user interface and DOM interactions
+                    renderDashboard() { /* ... */ },
+                    updateCharts() { /* ... */ },
+                    bindEventListeners() { /* ... */ }
+                },
+                
+                businessLogic: {
+                    // Contains the business rules and calculations
+                    forecastRevenue() { /* ... */ },
+                    calculateROI() { /* ... */ },
+                    analyzeMarketFit() { /* ... */ }
+                },
+                
+                visualizations: {
+                    // Creates and manages data visualizations
+                    createPieChart() { /* ... */ },
+                    createLineGraph() { /* ... */ },
+                    createBarChart() { /* ... */ }
+                },
+                
+                // Application initialization
+                init() {
+                    this.dataManager.loadData();
+                    this.uiController.bindEventListeners();
+                    this.uiController.renderDashboard();
+                }
+                };</code></pre>
+                                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>3. HTML Structure and CSS Framework</h3>
+                            <p>
+                                I created a clean, semantic HTML structure focusing on accessibility and organization. 
+                                The CSS was built using a component-based approach with CSS variables for consistent styling 
+                                and easy theme customization. The layout was implemented with CSS Grid for the dashboard and 
+                                Flexbox for component-level positioning.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>:root {
+  /* Color variables */
+  --primary-color: #3a7bd5;
+  --secondary-color: #00d2ff;
+  --accent-color: #ff7e5f;
+  --text-color: #333333;
+  --background-color: #f5f7fa;
+  --card-background: #ffffff;
+  
+  /* Typography */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Card styling */
+  --card-border-radius: 8px;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.metric-card {
+  background-color: var(--card-background);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--spacing-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>4. Custom Data Visualization Components</h3>
+                            <p>
+                                Rather than relying on external libraries, I built custom visualization components from scratch using 
+                                JavaScript and SVG. This approach allowed for complete control over the appearance and behavior of the 
+                                charts while demonstrating my ability to work with complex visual data representation.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function createPieChart(containerId, data) {
+  const container = document.getElementById(containerId);
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('class', 'pie-chart');
+  
+  const radius = 50;
+  const centerX = 50;
+  const centerY = 50;
+  
+  // Calculate total for percentages
+  const total = data.reduce((sum, item) => sum + item.value, 0);
+  
+  let startAngle = 0;
+  
+  // Create pie slices
+  data.forEach((item, index) => {
+    const percentage = item.value / total;
+    const endAngle = startAngle + (percentage * 2 * Math.PI);
+    
+    // Calculate path coordinates
+    const x1 = centerX + radius * Math.cos(startAngle);
+    const y1 = centerY + radius * Math.sin(startAngle);
+    const x2 = centerX + radius * Math.cos(endAngle);
+    const y2 = centerY + radius * Math.sin(endAngle);
+    
+    // Create path element for slice
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    
+    // Path data
+    const largeArcFlag = percentage > 0.5 ? 1 : 0;
+    const pathData = `
+      M ${centerX},${centerY}
+      L ${x1},${y1}
+      A ${radius},${radius} 0 ${largeArcFlag} 1 ${x2},${y2}
+      Z
+    `;
+    
+    path.setAttribute('d', pathData);
+    path.setAttribute('fill', item.color);
+    path.setAttribute('data-label', item.label);
+    path.setAttribute('data-value', item.value);
+    
+    // Add event listeners for interactivity
+    path.addEventListener('mouseover', showTooltip);
+    path.addEventListener('mouseout', hideTooltip);
+    
+    svg.appendChild(path);
+    
+    // Update start angle for next slice
+    startAngle = endAngle;
+  });
+  
+  // Add legend and labels
+  createChartLegend(container, data);
+  
+  container.appendChild(svg);
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>5. Business Logic Implementation</h3>
+                            <p>
+                                The core of the application is a set of business logic algorithms that analyze user input data and 
+                                provide actionable insights. I implemented these algorithms based on established business metrics 
+                                and forecasting techniques, adapting them for the fictional world of Flatland.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function analyzeBusiness(businessData) {
+  // Extract business metrics
+  const { revenue, expenses, customers, marketSize, growthRate } = businessData;
+  
+  // Calculate key performance indicators
+  const profitMargin = calculateProfitMargin(revenue, expenses);
+  const cashFlow = calculateCashFlow(businessData);
+  const marketPenetration = customers / marketSize;
+  const breakevenPoint = calculateBreakeven(businessData);
+  
+  // Project future performance
+  const revenueProjection = projectRevenue(businessData, 12); // 12 months
+  const customerProjection = projectCustomerGrowth(businessData, 12);
+  
+  // Generate recommendations based on analysis
+  const recommendations = generateRecommendations({
+    profitMargin,
+    cashFlow,
+    marketPenetration,
+    breakevenPoint,
+    growthRate
+  });
+  
+  return {
+    currentMetrics: {
+      profitMargin,
+      cashFlow,
+      marketPenetration,
+      breakevenPoint
+    },
+    projections: {
+      revenue: revenueProjection,
+      customers: customerProjection
+    },
+    recommendations
+  };
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>6. Form Validation and User Input Processing</h3>
+                            <p>
+                                I implemented comprehensive form validation to ensure data integrity and provide a smooth user experience.
+                                The validation includes real-time feedback, error handling, and data sanitization before processing.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function validateBusinessForm(formData) {
+  const errors = {};
+  
+  // Validate revenue (must be a positive number)
+  if (!formData.revenue || isNaN(formData.revenue) || formData.revenue < 0) {
+    errors.revenue = 'Revenue must be a positive number';
+  }
+  
+  // Validate expenses (must be a positive number)
+  if (!formData.expenses || isNaN(formData.expenses) || formData.expenses < 0) {
+    errors.expenses = 'Expenses must be a positive number';
+  }
+  
+  // Validate customer count (must be a positive integer)
+  if (!formData.customers || isNaN(formData.customers) || 
+      formData.customers < 0 || !Number.isInteger(Number(formData.customers))) {
+    errors.customers = 'Customer count must be a positive whole number';
+  }
+  
+  // Validate market size (must be >= customer count)
+  if (!formData.marketSize || isNaN(formData.marketSize) || 
+      formData.marketSize < formData.customers) {
+    errors.marketSize = 'Market size must be at least equal to your customer count';
+  }
+  
+  // Validate growth rate (must be between -100% and 1000%)
+  if (!formData.growthRate || isNaN(formData.growthRate) || 
+      formData.growthRate < -100 || formData.growthRate > 1000) {
+    errors.growthRate = 'Growth rate must be between -100% and 1000%';
+  }
+  
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors
+  };
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>7. Local Storage Integration</h3>
+                            <p>
+                                To enhance the user experience, I implemented local storage functionality to save user data between 
+                                sessions. This allows users to return to their previous work without needing to re-enter data.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>const StorageManager = {
+  saveBusinessData(businessData) {
+    try {
+      // Add timestamp for version control
+      const dataToSave = {
+        ...businessData,
+        lastUpdated: new Date().toISOString()
+      };
+      
+      // Convert to JSON string and save
+      localStorage.setItem('flatlandBusinessData', JSON.stringify(dataToSave));
+      return true;
+    } catch (error) {
+      console.error('Error saving business data:', error);
+      return false;
+    }
+  },
+  
+  loadBusinessData() {
+    try {
+      const savedData = localStorage.getItem('flatlandBusinessData');
+      if (!savedData) return null;
+      
+      // Parse JSON and return
+      return JSON.parse(savedData);
+    } catch (error) {
+      console.error('Error loading business data:', error);
+      return null;
+    }
+  },
+  
+  clearBusinessData() {
+    try {
+      localStorage.removeItem('flatlandBusinessData');
+      return true;
+    } catch (error) {
+      console.error('Error clearing business data:', error);
+      return false;
+    }
+  }
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>8. Responsive Design Implementation</h3>
+                            <p>
+                                I designed the application to be fully responsive, ensuring it works well on devices of all sizes. 
+                                The dashboard layout adjusts based on screen width, and interactive elements are optimized for both 
+                                mouse and touch interactions.
+                            </p>
+                            <p>
+                                Special attention was paid to making the data visualization components responsive, ensuring they 
+                                remain readable and interactive at all screen sizes.
+                            </p>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>9. Testing and Refinement</h3>
+                            <p>
+                                The application was thoroughly tested across different browsers and devices. I implemented several 
+                                rounds of improvements based on testing feedback, focusing on usability, performance, and visual design.
+                            </p>
+                            <p>
+                                During this phase, I also optimized the application for performance, reducing unnecessary DOM manipulations 
+                                and improving the efficiency of data processing algorithms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-features">
+                        <h2>Key Features</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h3>Interactive Dashboard</h3>
+                                <p>Comprehensive business overview with interactive metrics and custom-built visualizations</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h3>Financial Analysis</h3>
+                                <p>Advanced business metrics calculation and financial forecasting tools</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h3>Business Insights</h3>
+                                <p>AI-driven recommendations based on business data analysis</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h3>Data Persistence</h3>
+                                <p>Local storage integration for saving and retrieving business data</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-challenges">
+                        <h2>Challenges & Solutions</h2>
+                        <div class="challenge-item">
+                            <h3>Challenge: Building Custom Chart Components</h3>
+                            <p>
+                                Creating responsive, interactive data visualization components from scratch without relying on external 
+                                libraries presented significant challenges in terms of mathematics, SVG manipulation, and browser compatibility.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I approached this by first thoroughly researching SVG fundamentals and data visualization best practices. 
+                                I then broke down each chart type into smaller components, developing and testing them incrementally. 
+                                For complex mathematical calculations, I created utility functions that could be reused across different 
+                                chart types. Finally, I implemented a responsive design system that adjusts chart dimensions and text 
+                                elements based on container size.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Challenge: Implementing Complex Business Logic</h3>
+                            <p>
+                                Developing accurate business forecasting algorithms and financial metrics calculations required 
+                                detailed understanding of business principles while keeping the code maintainable and efficient.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I created a modular approach to business logic, breaking down complex calculations into smaller, 
+                                testable functions. Each business metric was implemented as a separate module with clear input and 
+                                output specifications. This approach allowed for easier testing and validation of results. I also 
+                                incorporated data validation at multiple levels to ensure accurate calculations even with edge-case inputs.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Challenge: Ensuring Cross-Browser Compatibility</h3>
+                            <p>
+                                The application's heavy reliance on advanced JavaScript features and SVG manipulation led to 
+                                compatibility issues across different browsers, particularly older ones.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I implemented feature detection rather than browser detection to ensure the application would work 
+                                correctly across different browsers. For critical features, I created fallback functionality that 
+                                would provide a simpler but still functional experience in browsers with limited support. I also 
+                                used a combination of polyfills and transpilation to ensure modern JavaScript features would work 
+                                consistently across browsers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-outcomes">
+                        <h2>Outcomes & Lessons Learned</h2>
+                        <p>
+                            The Flatland Business Advisor project significantly enhanced my skills in building complex web applications 
+                            and reinforced my understanding of advanced DOM manipulation techniques. Key takeaways include:
+                        </p>
+                        <ul>
+                            <li>
+                                The importance of planning a modular architecture for complex applications
+                            </li>
+                            <li>
+                                Techniques for creating custom data visualization components without external libraries
+                            </li>
+                            <li>
+                                Implementing complex business logic in a maintainable, testable way
+                            </li>
+                            <li>
+                                Optimizing application performance through efficient DOM manipulation
+                            </li>
+                            <li>
+                                Ensuring cross-browser compatibility for advanced web features
+                            </li>
+                        </ul>
+                        <p>
+                            The finished application has received positive feedback for its intuitive interface, powerful analytics 
+                            capabilities, and smooth user experience. The custom-built data visualization components in particular 
+                            have been highlighted as a standout feature that demonstrates advanced front-end development skills.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-navigation">
+                    <h2>Explore More Projects</h2>
+                    <div class="project-nav-links">
+                        <a href="rock-paper-scissors.html" class="project-nav-link prev">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Previous Project</span>
+                            <h3>Rock Paper Scissors Game</h3>
+                        </a>
+                        <a href="rss-reader.html" class="project-nav-link next">
+                            <span>Next Project</span>
+                            <h3>RSS Reader</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="../index.html">Deepe<span>shma</span></a>
+                </div>
+                <p class="footer-tagline">
+                    Creating intuitive digital experiences with code and creativity
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Deepeshma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#hero">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#testimonials">Testimonials</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="basic-webpage.html">Urban Brew Cafe</a></li>
+                        <li><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
+                        <li><a href="flatland-advisor.html" class="active">Flatland Business Advisor</a></li>
+                        <li><a href="rss-reader.html">RSS Reader</a></li>
+                        <li><a href="../projects.html">All Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:deepeshma@gmail.com">deepeshma@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+14155552671">(415) 555-2671</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, California</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Deepeshma. All rights reserved.</p>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

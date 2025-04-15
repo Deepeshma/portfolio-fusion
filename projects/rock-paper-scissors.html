@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game | Deepeshma</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Detailed information about Rock Paper Scissors game project by Deepeshma" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html" aria-label="Home">
+                    <span class="logo-text">Deepeshma</span>
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects" class="active" aria-current="page">Projects</a></li>
+                    <li><a href="../index.html#testimonials">Testimonials</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li>
+                        <a href="../assets/resume.pdf" class="resume-link" target="_blank" rel="noopener">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <div class="section-container">
+                <div class="project-header">
+                    <a href="../index.html#projects" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Projects
+                    </a>
+                    <h1>Rock Paper Scissors Game</h1>
+                    <div class="project-links-header">
+                        <a href="https://rock-paper-scissors-pearl-eight-97.vercel.app/" class="button primary" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Deepeshma/rock-paper-scissors.git" class="button secondary" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-showcase">
+                    <div class="project-image-large">
+                        <img src="../assets/images/rock-paper-scissors.png" alt="Screenshot of Rock Paper Scissors game" />
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div class="project-overview">
+                        <h2>Project Overview</h2>
+                        <p>
+                            This interactive Rock Paper Scissors game demonstrates my ability to create engaging web applications 
+                            using JavaScript. The project showcases DOM manipulation, event handling, animations, and game logic 
+                            implementation. Players can compete against a computer opponent with real-time score tracking and 
+                            visual feedback for each round's outcome.
+                        </p>
+                    </div>
+
+                    <div class="project-details-grid">
+                        <div class="project-detail-item">
+                            <h3>Project Goals</h3>
+                            <ul>
+                                <li>Create an interactive game with intuitive user interface</li>
+                                <li>Implement core JavaScript concepts including DOM manipulation</li>
+                                <li>Add engaging animations and visual feedback</li>
+                                <li>Build a responsive design that works on all devices</li>
+                                <li>Practice object-oriented programming principles</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Technologies Used</h3>
+                            <ul>
+                                <li>HTML5 for structure</li>
+                                <li>CSS3 with animations and transitions</li>
+                                <li>Vanilla JavaScript (ES6+)</li>
+                                <li>Local Storage API for saving game statistics</li>
+                                <li>CSS Grid and Flexbox for responsive layout</li>
+                                <li>GitHub for version control</li>
+                                <li>Github pages for deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-development">
+                        <h2>Development Process</h2>
+                        <div class="development-step">
+                            <h3>1. Planning and Design</h3>
+                            <p>
+                                I started by mapping out the game's user flow and creating wireframes for different states 
+                                (start screen, gameplay, results). I focused on creating a clean, engaging interface that would 
+                                be intuitive to use while providing clear visual feedback about the game state.
+                            </p>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>2. HTML Structure</h3>
+                            <p>
+                                The game was structured with semantic HTML to create a solid foundation. I designed the layout 
+                                to accommodate different game states and ensure all elements would be accessible.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>&lt;div class="game-container"&gt;
+  &lt;div class="game-header"&gt;
+    &lt;h1&gt;Rock Paper Scissors&lt;/h1&gt;
+    &lt;div class="score-board"&gt;
+      &lt;div class="score"&gt;
+        &lt;p&gt;You&lt;/p&gt;
+        &lt;h2 id="user-score"&gt;0&lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class="score"&gt;
+        &lt;p&gt;Computer&lt;/p&gt;
+        &lt;h2 id="computer-score"&gt;0&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="result"&gt;
+    &lt;p&gt;Choose an option to start&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="choices"&gt;
+    &lt;button class="choice" id="rock"&gt;✊&lt;/button&gt;
+    &lt;button class="choice" id="paper"&gt;✋&lt;/button&gt;
+    &lt;button class="choice" id="scissors"&gt;✌️&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>3. CSS Implementation</h3>
+                            <p>
+                                I used CSS to create a visually appealing interface with smooth animations for game interactions.
+                                The design was implemented using a mobile-first approach to ensure good playability on all devices.
+                                Special attention was paid to button states and visual feedback elements.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>.choice {
+  border: 4px solid #333;
+  border-radius: 50%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choice:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.winner {
+  animation: pulse 1s;
+  box-shadow: 0 0 15px #4CAF50;
+  border-color: #4CAF50;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>4. JavaScript Game Logic</h3>
+                            <p>
+                                The core game logic was implemented using modern JavaScript (ES6+). I structured the code using 
+                                object-oriented principles for better organization and maintainability. The game includes several key features:
+                            </p>
+                            <ul>
+                                <li>Random computer selection algorithm</li>
+                                <li>Win determination logic</li>
+                                <li>Score tracking and storage</li>
+                                <li>Visual feedback for game outcomes</li>
+                                <li>Animation controls for interactive elements</li>
+                            </ul>
+                            <div class="code-snippet">
+                                <pre><code>function playRound(userChoice) {
+  const computerChoice = getComputerChoice();
+  const result = determineWinner(userChoice, computerChoice);
+  
+  displayChoices(userChoice, computerChoice);
+  updateScore(result);
+  animateResult(result, userChoice, computerChoice);
+  
+  // Store game statistics
+  saveGameToHistory(userChoice, computerChoice, result);
+}
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "tie";
+  }
+  
+  const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+  };
+  
+  return winConditions[userChoice] === computerChoice ? "win" : "lose";
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>5. Local Storage Implementation</h3>
+                            <p>
+                                To enhance the game experience, I implemented local storage to save the player's game history and statistics.
+                                This allows players to track their performance over time and adds a layer of engagement.
+                            </p>
+                            <div class="code-snippet">
+                                <pre><code>function saveGameToHistory(userChoice, computerChoice, result) {
+  let gameHistory = JSON.parse(localStorage.getItem('rpsHistory')) || [];
+  
+  const gameRecord = {
+    timestamp: Date.now(),
+    userChoice,
+    computerChoice,
+    result
+  };
+  
+  gameHistory.push(gameRecord);
+  
+  // Keep only the most recent 50 games
+  if (gameHistory.length > 50) {
+    gameHistory = gameHistory.slice(-50);
+  }
+  
+  localStorage.setItem('rpsHistory', JSON.stringify(gameHistory));
+  updateStatistics();
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="development-step">
+                            <h3>6. Testing and Refinement</h3>
+                            <p>
+                                The game was thoroughly tested across different browsers and devices to ensure consistent 
+                                behavior and responsiveness. I implemented several refinements based on initial testing:
+                            </p>
+                            <ul>
+                                <li>Improved touch controls for mobile devices</li>
+                                <li>Added keyboard accessibility for selection buttons</li>
+                                <li>Refined animation timing for better visual feedback</li>
+                                <li>Enhanced color contrast for better accessibility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-features">
+                        <h2>Key Features</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <h3>Interactive Gameplay</h3>
+                                <p>Intuitive controls with immediate visual feedback for player actions</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h3>Statistics Tracking</h3>
+                                <p>Game history and performance statistics saved between sessions</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3>Fully Responsive</h3>
+                                <p>Optimized for gameplay on both desktop and mobile devices</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h3>Smooth Animations</h3>
+                                <p>Polished transitions and animations enhance the gaming experience</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-challenges">
+                        <h2>Challenges & Solutions</h2>
+                        <div class="challenge-item">
+                            <h3>Challenge: Creating Engaging Animations</h3>
+                            <p>
+                                Developing animations that would enhance gameplay without being distracting or causing 
+                                performance issues on mobile devices was challenging.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                I used CSS transitions and keyframe animations optimized for performance. By limiting 
+                                animations to transform and opacity properties, I was able to create smooth effects that run 
+                                well even on lower-end devices. I also implemented conditional animation complexity based on 
+                                device capabilities.
+                            </p>
+                        </div>
+                        <div class="challenge-item">
+                            <h3>Challenge: Creating a Fair Computer Opponent</h3>
+                            <p>
+                                I wanted to create a computer opponent that felt fair and challenging without being predictable.
+                            </p>
+                            <h4>Solution:</h4>
+                            <p>
+                                Rather than using pure randomness, I implemented a weighted random selection algorithm that 
+                                adjusts based on the player's previous choices and success rate. This creates a more engaging 
+                                opponent that adapts to the player's pattern while still maintaining fairness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-outcomes">
+                        <h2>Outcomes & Lessons Learned</h2>
+                        <p>
+                            This project provided valuable experience in creating interactive applications with JavaScript 
+                            and reinforced my understanding of DOM manipulation and event-driven programming. Key takeaways include:
+                        </p>
+                        <ul>
+                            <li>
+                                The importance of planning game state management before implementation
+                            </li>
+                            <li>
+                                Techniques for creating smooth, performant animations with CSS and JavaScript
+                            </li>
+                            <li>
+                                Approaches to designing intuitive user interfaces for interactive applications
+                            </li>
+                            <li>
+                                Methods for implementing and testing game logic with clean, maintainable code
+                            </li>
+                        </ul>
+                        <p>
+                            The finished game received positive feedback for its smooth animations, intuitive controls, and 
+                            engaging gameplay. Users particularly appreciated the statistics tracking feature, which added 
+                            depth to what could otherwise be a simple game.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-navigation">
+                    <h2>Explore More Projects</h2>
+                    <div class="project-nav-links">
+                        <a href="basic-webpage.html" class="project-nav-link prev">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Previous Project</span>
+                            <h3>Urban Brew Cafe</h3>
+                        </a>
+                        <a href="flatland-advisor.html" class="project-nav-link next">
+                            <span>Next Project</span>
+                            <h3>Flatland Business Advisor</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="../index.html">Deepe<span>shma</span></a>
+                </div>
+                <p class="footer-tagline">
+                    Creating intuitive digital experiences with code and creativity
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Deepeshma" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/Deepeshma" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Deepeshma" target="_blank" rel="noopener" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#hero">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#testimonials">Testimonials</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="basic-webpage.html">Urban Brew Cafe</a></li>
+                        <li><a href="rock-paper-scissors.html" class="active">Rock Paper Scissors</a></li>
+                        <li><a href="flatland-advisor.html">Flatland Advisor</a></li>
+                        <li><a href="rss-reader.html">RSS Reader</a></li>
+                        <li><a href="../projects.html">All Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:deepeshma@gmail.com">deepeshma@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+14155552671">(415) 555-2671</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, California</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Deepeshma. All rights reserved.</p>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
